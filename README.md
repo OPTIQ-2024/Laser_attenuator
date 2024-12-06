@@ -17,10 +17,10 @@ L'atténuateur utilise :
 ## Matériel
  
   ### Éléments opto-mécaniques
-    - Plaque demi-onde (Thorlabs WPH05M-633)
-    - Cube séparateur de faisceau polarisant (Thorlabs PBS251)
-    - Lentille plano-convexe de 100 mm (Thorlabs LA1509)
-    - Divers supports et bases (Thorlabs).
+    -Plaque demi-onde (Thorlabs WPH05M-633)
+    -Cube séparateur de faisceau polarisant (Thorlabs PBS251)
+    -Lentille plano-convexe de 100 mm (Thorlabs LA1509)
+    -Divers supports et bases (Thorlabs).
    
  ### Composants électroniques
    - Servomoteur : Dynamixel MX12
