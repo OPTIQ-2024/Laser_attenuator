@@ -25,6 +25,7 @@ L'atténuateur utilise :
    - Oscilloscope numérique : Picoscope 2406B
 ## Procédure
   ### Contrôle moteur
+  En ce qui concerne le contriole du motuer nous avons premierement insatllé pypot
   ### Oscilloscope
   
 1- Téléchargement des bibliothèques Python pour le picoscope
