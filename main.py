@@ -7,7 +7,7 @@ from ui_motor import Ui_MainWindow
 from pypot.dynamixel.io import DxlIO
 
 
-# Main application class
+# Main application classprint()
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
@@ -22,15 +22,19 @@ class MainWindow(QtWidgets.QMainWindow):
 
     # Slots definition
     def connect(self):
-        self.dxlio = DxlIO("/dev/tty.usbserial-FT2H2Y2W", baudrate=1000000)
+        
+        self.dxlio = DxlIO("COM6", baudrate=1000000)
         self.m_id = self.dxlio.scan(ids=range(5))
+        self.dxlio.set_pid_gain({self.m_id[0]: [11*0.125, 10*1000/2048, 8*0.004]})
+        self.dxlio.set_moving_speed({self.m_id[0]: 200})
 
     def close(self):
         self.dxlio.close()
 
     def set_position(self, value):
+        
         self.dxlio.set_goal_position({self.m_id[0]: value})
-        time.sleep(0.1)
+        time.sleep(0.5)
         current_pos = self.dxlio.get_present_position(self.m_id)
         self.ui.label_current_pos.setText(f'Current Position: {current_pos[0]}')
 
