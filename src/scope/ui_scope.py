@@ -1,9 +1,19 @@
+"""
+Ce code définit l'interface utilisateur (UI) d'une application graphique en utilisant PyQt5 et pyqtgraph. 
+L'objectif principal est de créer une interface permettant de visualiser des données, acquises à partir d'un oscilloscope, et de contrôler certaines fonctions de l'oscilloscope avec des boutons.
+"""
+
 from PyQt5.QtWidgets import QPushButton, QVBoxLayout, QHBoxLayout, QWidget, QListWidget
 
 from pyqtgraph import PlotWidget
 
 class Ui_ScopeViewer():
+
+    """Cette classe définit la structure de l'interface utilisateur"""
+
     def setupUi(self, parent):
+
+        """Configuration de l'interfacce utilisateur"""
 
         parent.setWindowTitle("Scope Viewer")
 

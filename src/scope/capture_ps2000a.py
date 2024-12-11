@@ -1,5 +1,5 @@
 '''
-This Program made to take a capture of picoscope2000Series depending on the mode considered
+Ce programme est conçu pour capturer des données avec le PicoScope série 2000, en fonction du mode considéré.
 
 '''
 
@@ -13,19 +13,28 @@ from ps2000a import PS2000a
 
 class BlockMode(QtCore.QObject):
 
+    """Permet d'intéragir avec l'oscilloscope en mode 'Block Mode' 
+    Elle permet de configurer les paramètres, acquérir les données et de transmettre aux autres parties du programme via des signaux PyQt. """
+
     current_plot = QtCore.pyqtSignal(object, object)
 
     def __init__(self, parent=None):
+
+        """Creation d'une instance de l'oscillscope via la classe PS2000a"""
+
         super().__init__(parent)  
         self.ps = PS2000a()
 
     def set_sampling(self, obs_duration=150e-6, num_samples = 4096):
-        self.obs_duration = obs_duration
-        self.num_samples = num_samples
-        self.sampling_interval = self.obs_duration / self.num_samples
+
+        """Configuration de l'oscilloscope"""
+
+        self.obs_duration = obs_duration # Durée totale de l'acquisition (s)
+        self.num_samples = num_samples   # Nombre totale d'échnatillon à collecter
+        self.sampling_interval = self.obs_duration / self.num_samples # Calcul de l'intervalle d'échantillonnage
         self.actual_sampling_interval, self.actual_num_samples, self.max_samples = self.ps.setSamplingInterval(
-            self.sampling_interval, self.obs_duration)
-        self.time = np.arange(self.actual_num_samples) * self.actual_sampling_interval
+            self.sampling_interval, self.obs_duration)    
+        self.time = np.arange(self.actual_num_samples) * self.actual_sampling_interval # Creation d'un axe tempore
 
     def set_channels(self,
                      channel='A',
@@ -34,6 +43,9 @@ class BlockMode(QtCore.QObject):
                      offset=0.0,
                      enabled=True,
                      BWLimited=False):
+        
+        """Configuration d'un canal spécifique de l'oscilloscope"""
+
         self.ps.setChannel(channel, coupling, vrange, offset, enabled,
                            BWLimited)
 
@@ -44,6 +56,9 @@ class BlockMode(QtCore.QObject):
                      delay=0,
                      timeout_ms=100,
                      enabled=True):
+        
+        """Configuration d'un trigger simple sur l'oscilloscope"""
+
         self.ps.setSimpleTrigger(trig_src, threshold, direction, delay,
                                  timeout_ms, enabled)
 
@@ -52,23 +67,41 @@ class BlockMode(QtCore.QObject):
                     pkToPk=2.0,
                     waveType="Sine",
                     frequency=50E3):
+        
+        """Configuration du générateur de signal intégré de l'oscilloscope"""
+
         self.ps.setSigGenBuiltInSimple(offsetVoltage, pkToPk, waveType,
                                        frequency)
 
     def get_data(self, channel='A', actual_num_samples=0):
+
+        """Récuperation des données acquises par l'oscilloscope pour un canal spécifique et les stocke"""
+
         self.data = self.ps.getDataV(channel, actual_num_samples)
 
     def run_block(self):
+
+        """Démarre une acquisition en mode 'Block'"""
+
         self.ps.runBlock()
 
     def wait_ready(self):
+        
+        """Attend que l'acquisition soit terminée"""
+
         self.ps.waitReady()
 
     def close_scope(self):
+
+        """Arrête l'oscilloscope et libère ses ressources"""
+
         self.ps.stop()
         self.ps.close()
 
     def get_plot(self, type='A'):
+
+        """Émet les données via le signal current_plot pour mise à jour dans l'interface graphique"""
+        
         self.run_block()
         self.wait_ready()
         # self.data_all_channels = []
