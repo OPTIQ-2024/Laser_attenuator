@@ -1,4 +1,4 @@
-"""Ce proggramme sert à contrôler un oscilloscope de type Picoscope2406B et d'afficher en temps réel les signaux mesurés par l'oscilloscope via une interface graphique"""
+"""Ce programme sert à contrôler un oscilloscope de type Picoscope2406B et d'afficher en temps réel les signaux mesurés par l'oscilloscope via une interface graphique"""
 
 import numpy as np
 import time

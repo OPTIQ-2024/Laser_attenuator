@@ -5,7 +5,7 @@ L'atténuateur utilise :
 1. Une plaque demi-onde montée sur un moteur rotatif contrôlé pour modifier la polarisation d’entrée.
 2. Un polariseur fixe pour transmettre ou réfléchir le faisceau polarisé.
 3. Une photodiode pour détecter une partie du faisceau réfléchi, connectée à un oscilloscope numérique.
-## Ojectifs
+## Objectifs
 1. Contrôler le moteur rotatif pour ajuster la polarisation.
 2. Récupérer les données de l’oscilloscope pour visualiser la puissance du laser.
 3. Automatiser ces tâches via une interface utilisateur graphique (GUI).
@@ -29,7 +29,9 @@ L'atténuateur utilise :
   ### Oscilloscope
   
 1- Téléchargement des bibliothèques Python pour le picoscope
-  - pico-python
-  - PicoDSK
-2- Intégration de l'affichage des données dans le GUI
-Utilisation de ctypes pour une bibliothèque C
+  - Aller [ici](https://github.com/colinoflynn/pico-python/blob/master/picoscope.py) et copier les codes error_codes.py, picobase.py et ps2000a.py
+  - Aller [ici](https://www.picotech.com/downloads), choisir PicoScope2000 Series, Picoscope 2406B et télécharger la version recommandé
+  - Installer PyQt5 et pyqtgraph
+2- Configurer l'interface utilisateur (UI) 
+3- Capturer les données de l'oscilloscope
+4- Controler l'oscilloscope et afficher en temps réel les signaux
