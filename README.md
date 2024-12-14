@@ -27,12 +27,12 @@ L'atténuateur utilise :
   ### Contrôle moteur
   En ce qui concerne le contriole du motuer nous avons premierement insatllé pypot
 
-   #### Étapes de configuration
+   ### Étapes de configuration
 1. Configuration matérielle
 1.	Connectez le moteur :
--Utilisez l'alimentation SMPS2 pour alimenter votre moteur Dynamixel.
--Connectez le contrôleur USB Dynamixel U2D2 à votre PC via un câble USB.
--Reliez le moteur au U2D2 à l'aide du connecteur TTL 3 broches.
+- Utilisez l'alimentation SMPS2 pour alimenter votre moteur Dynamixel.
+- Connectez le contrôleur USB Dynamixel U2D2 à votre PC via un câble USB.
+- Reliez le moteur au U2D2 à l'aide du connecteur TTL 3 broches.
 2.	Vérifiez la vitesse de communication (baud rate) et l’ID :
 -La vitesse par défaut pour le moteur MX12 est 1000000.
 -Assurez-vous que l’ID du moteur est unique dans votre configuration.
