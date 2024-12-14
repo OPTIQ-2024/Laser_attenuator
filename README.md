@@ -36,17 +36,17 @@ L'atténuateur utilise :
     
    ### Vérifiez la vitesse de communication (baud rate) et l’ID :
  1. La vitesse par défaut pour le moteur MX12 est 1000000.
- 2. Assurez-vous que l’ID du moteur est unique dans votre configuration.
+ 2. S'assurer que l’ID du moteur est unique dans votre configuration.
 
  ### I-2. Installation logicielle
  1.	Installez Python : Téléchargez et installez Python depuis python.org.
- 2.	Installez le package pypot  : Exécutez la commande suivante dans votre terminal ou invite de commande : 	pip install pypot
+ 2.	Installez le package pypot  : Exécutez la commande suivante dans le terminal ou invite de commande : 	pip install pypot
  
- ### I-3. Testez la communication avec le moteur
-- on test premierement la communication du logicel avec le logiciel Dynamixel Wizard 2, pour certaines valeurs valeur du PID , on etduie le comportement du goal position et present position, dans le d'avoir une meilleure résolution.
-- On intercopore ensuite les valeurs de PID  trouvées correspondant à la meilleure résolution dans notre fichier main.py
-- Ouvrir une communication avec le moteur.
-- Scanner les moteurs connectés.
+ ### I-3. Tester la communication avec le moteur
+- on teste premièrement la communication du moteur avec le logiciel Dynamixel Wizard 2, pour certaines valeurs du PID , on etduie le comportement du goal position et present position, dans le but d'avoir une meilleure résolution.
+- On intercopore ensuite les valeurs de PID  trouvées correspondant à la meilleure résolution dans notre fichier main.py permettant de générant l'interface du moteur
+- Ouvrir ensuite une communication avec le moteur.
+- Scanner le moteur connecté (identification du périphérique COM6).
 - Contrôler la position du moteur.
 
   ### II. Oscilloscope
