@@ -43,11 +43,13 @@ L'atténuateur utilise :
  2.	Installez le package pypot  : Exécutez la commande suivante dans le terminal ou invite de commande : 	pip install pypot
  
  ### I-3. Tester la communication avec le moteur
-- on teste premièrement la communication du moteur avec le logiciel Dynamixel Wizard 2, pour certaines valeurs du PID , on etduie le comportement du goal position et present position, dans le but d'avoir une meilleure résolution.
-- On intercopore ensuite les valeurs de PID  trouvées correspondant à la meilleure résolution dans notre fichier main.py permettant de générant l'interface du moteur
-- Ouvrir ensuite une communication avec le moteur.
-- Scanner le moteur connecté (identification du périphérique COM6).
-- Contrôler la position du moteur.
+
+ 1. Mettre au point l'interface
+ 2.  Tester premièrement la communication du moteur avec le logiciel Dynamixel Wizard 2, pour certaines valeurs du PID , on etduie le comportement du goal position et present position, dans le but d'avoir une meilleure résolution.
+ 3. Intercoporer ensuite les valeurs de PID  trouvées correspondant à la meilleure résolution dans notre fichier main.py permettant de générant l'interface du moteur
+ 4. Ouvrir ensuite une communication avec le moteur.
+ 5. Scanner le moteur connecté (identification du périphérique COM6).
+ 6. Contrôler la position du moteur.
 
   ### II. Oscilloscope
   
