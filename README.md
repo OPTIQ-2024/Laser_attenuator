@@ -40,13 +40,14 @@ L'atténuateur utilise :
 
  ### I-2. Installation logicielle
  1.	Installez Python : Téléchargez et installez Python depuis python.org.
- 2.	Installez le package pypot : Exécutez la commande suivante dans votre terminal ou invite de commande : 	pip install pypot
+ 2.	Installez le package pypot  : Exécutez la commande suivante dans votre terminal ou invite de commande : 	pip install pypot
  
  ### I-3. Testez la communication avec le moteur
-Le script Python ci-dessous montre comment :
-•	Ouvrir une communication avec le moteur.
-•	Scanner les moteurs connectés.
-•	Contrôler la position du moteur.
+- on test premierement la communication du logicel avec le logiciel Dynamixel Wizard 2, pour certaines valeurs valeur du PID , on etduie le comportement du goal position et present position, dans le d'avoir une meilleure résolution.
+- On intercopore ensuite les valeurs de PID  trouvées correspondant à la meilleure résolution dans notre fichier main.py
+- Ouvrir une communication avec le moteur.
+- Scanner les moteurs connectés.
+- Contrôler la position du moteur.
 
   ### II. Oscilloscope
   
