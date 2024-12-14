@@ -24,30 +24,31 @@ L'atténuateur utilise :
    - Photodiode biaisée : Thorlabs DET10A2
    - Oscilloscope numérique : Picoscope 2406B
 ## Procédure
-  ### Contrôle moteur
-  En ce qui concerne le contriole du motuer nous avons premierement insatllé pypot
+  ### I-Contrôle moteur
 
    ### Étapes de configuration
-1. Configuration matérielle
-1.	Connectez le moteur :
-- Utilisez l'alimentation SMPS2 pour alimenter votre moteur Dynamixel.
-- Connectez le contrôleur USB Dynamixel U2D2 à votre PC via un câble USB.
-- Reliez le moteur au U2D2 à l'aide du connecteur TTL 3 broches.
-2.	Vérifiez la vitesse de communication (baud rate) et l’ID :
--La vitesse par défaut pour le moteur MX12 est 1000000.
--Assurez-vous que l’ID du moteur est unique dans votre configuration.
-2. Installation logicielle
-1.	Installez Python (si ce n’est pas déjà fait) :
--Téléchargez et installez Python depuis python.org.
-2.	Installez le package pypot : Exécutez la commande suivante dans votre terminal ou invite de commande :
-3.	pip install pypot
-3. Testez la communication avec le moteur
+### I-1. Configuration matérielle
+
+   ### Connectez le moteur :
+ 1. Utilisez l'alimentation SMPS2 pour alimenter votre moteur Dynamixel.
+ 2. Connectez le contrôleur USB Dynamixel U2D2 à votre PC via un câble USB.
+ 3. Reliez le moteur au U2D2 à l'aide du connecteur TTL 3 broches.
+    
+   ### Vérifiez la vitesse de communication (baud rate) et l’ID :
+ 1. La vitesse par défaut pour le moteur MX12 est 1000000.
+ 2. Assurez-vous que l’ID du moteur est unique dans votre configuration.
+
+ ### I-2. Installation logicielle
+ 1.	Installez Python : Téléchargez et installez Python depuis python.org.
+ 2.	Installez le package pypot : Exécutez la commande suivante dans votre terminal ou invite de commande : 	pip install pypot
+ 
+ ### I-3. Testez la communication avec le moteur
 Le script Python ci-dessous montre comment :
 •	Ouvrir une communication avec le moteur.
 •	Scanner les moteurs connectés.
 •	Contrôler la position du moteur.
 
-  ### Oscilloscope
+  ### II. Oscilloscope
   
 1- Téléchargement des bibliothèques Python pour le picoscope
   - Aller [ici](https://github.com/colinoflynn/pico-python/blob/master/picoscope.py) et copier les codes error_codes.py, picobase.py et ps2000a.py
