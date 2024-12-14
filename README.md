@@ -32,6 +32,9 @@ L'atténuateur utilise :
   - Aller [ici](https://github.com/colinoflynn/pico-python/blob/master/picoscope.py) et copier les codes error_codes.py, picobase.py et ps2000a.py
   - Aller [ici](https://www.picotech.com/downloads), choisir PicoScope2000 Series, Picoscope 2406B et télécharger la version recommandé
   - Installer PyQt5 et pyqtgraph
+
 2- Configurer l'interface utilisateur (UI) 
+
 3- Capturer les données de l'oscilloscope
+
 4- Controler l'oscilloscope et afficher en temps réel les signaux
