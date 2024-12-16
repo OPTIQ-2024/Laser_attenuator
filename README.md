@@ -46,7 +46,7 @@ L'atténuateur utilise :
 
  1. Mettre au point l'interface
  2.  Tester premièrement la communication du moteur avec le logiciel Dynamixel Wizard 2, pour certaines valeurs du PID , etdutier le comportement du goal position et present position sur Dynamixel, dans le but d'avoir une meilleure résolution.
- 3. Intercoporer ensuite les valeurs de PID  trouvées correspondant à la meilleure résolution dans notre fichier main.py permettant de générant l'interface du moteur
+ 3. Incorporer ensuite les valeurs de PID  trouvées correspondant à la meilleure résolution dans notre fichier main.py permettant de générant l'interface du moteur
  4. Ouvrir ensuite une communication avec le moteur.
  5. Scanner le moteur connecté (identification du périphérique COM6).
  6. Contrôler la position du moteur.
